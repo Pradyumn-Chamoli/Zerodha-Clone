@@ -1,10 +1,12 @@
 import React from "react";
 
 const Summary = () => {
+  const name = localStorage.getItem("username"); 
+
   return (
     <>
       <div className="username">
-        <h6>Hi, User!</h6>
+        <h6>Hi, {name || "User"}!</h6>
         <hr className="divider" />
       </div>
 
@@ -42,7 +44,7 @@ const Summary = () => {
             <h3 className="profit">
               1.55k <small>+5.20%</small>{" "}
             </h3>
-            <p>P&L</p>
+            <p>P&amp;L</p>
           </div>
           <hr />
 

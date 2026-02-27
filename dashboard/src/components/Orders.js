@@ -1,16 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Orders = () => {
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}/orders`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => setOrders(res.data))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className="orders">
-      <div className="no-orders">
-        <p>You haven't placed any orders today</p>
+      <h3>Orders</h3>
 
-        <Link to={"/"} className="btn">
-          Get started
-        </Link>
-      </div>
+      {orders.length === 0 && <p>No orders placed yet.</p>}
+
+      {orders.map((order, index) => (
+        <p key={index}>
+          {order.name} – {order.qty} @ {order.price} ({order.mode})
+        </p>
+      ))}
     </div>
   );
 };
