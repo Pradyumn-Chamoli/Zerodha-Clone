@@ -7,9 +7,9 @@ function Hero() {
       {/* TOP BAR */}
       <div className="d-flex justify-content-between align-items-center px-4 py-4 support-wrapper">
         <h4 className="mb-0">Support Portal</h4>
-        <a href="#" className="text-decoration-none">
+        <button className="link-btn">
           Track Tickets
-        </a>
+        </button>
       </div>
 
       {/* MAIN CONTENT */}
@@ -29,10 +29,10 @@ function Hero() {
             />
 
             <div className="d-flex flex-wrap gap-3">
-              <a href="#" className="text-decoration-none">Track account opening</a>
-              <a href="#" className="text-decoration-none">Track segment activation</a>
-              <a href="#" className="text-decoration-none">Intraday margins</a>
-              <a href="#" className="text-decoration-none">Kite user manual</a>
+              <button className="link-btn">Track account opening</button>
+              <button className="link-btn">Track segment activation</button>
+              <button className="link-btn">Intraday margins</button>
+              <button className="link-btn">Kite user manual</button>
             </div>
           </div>
 
@@ -42,14 +42,14 @@ function Hero() {
 
             <ol className="ps-3">
               <li>
-                <a href="#" className="text-decoration-none">
+                <button className="link-btn">
                   Current Takeovers and Delisting - January 2026
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-decoration-none">
+                <button className="link-btn">
                   Latest Intraday leverages - MIS & CO
-                </a>
+                </button>
               </li>
             </ol>
           </div>

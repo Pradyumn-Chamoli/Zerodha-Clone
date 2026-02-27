@@ -45,9 +45,32 @@ function Team() {
 
           <p>
             Connect on{" "}
-            <a href="#" className="text-decoration-none">Homepage</a> /{" "}
-            <a href="#" className="text-decoration-none">TradingQnA</a> /{" "}
-            <a href="#" className="text-decoration-none">Twitter</a>
+            <a
+              href="https://zerodha.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-decoration-none"
+            >
+              Homepage
+            </a>{" "}
+            /{" "}
+            <a
+              href="https://tradingqna.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-decoration-none"
+            >
+              TradingQnA
+            </a>{" "}
+            /{" "}
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-decoration-none"
+            >
+              Twitter
+            </a>
           </p>
         </div>
 

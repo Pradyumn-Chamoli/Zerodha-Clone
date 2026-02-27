@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
@@ -57,13 +58,11 @@ const Login = () => {
       fontSize: "32px",
       fontWeight: "700",
       color: "#2d3748",
-      marginBottom: "10px",
-      fontFamily: "'Poppins', sans-serif"
+      marginBottom: "10px"
     },
     subtitle: {
       fontSize: "14px",
-      color: "#718096",
-      fontFamily: "'Inter', sans-serif"
+      color: "#718096"
     },
     inputGroup: {
       marginBottom: "20px"
@@ -73,8 +72,7 @@ const Login = () => {
       marginBottom: "8px",
       fontSize: "13px",
       fontWeight: "500",
-      color: "#4a5568",
-      fontFamily: "'Inter', sans-serif"
+      color: "#4a5568"
     },
     input: (field) => ({
       width: "100%",
@@ -84,7 +82,6 @@ const Login = () => {
       borderRadius: "10px",
       outline: "none",
       transition: "all 0.3s ease",
-      fontFamily: "'Inter', sans-serif",
       backgroundColor: "#fafafa"
     }),
     button: {
@@ -99,7 +96,6 @@ const Login = () => {
       cursor: loading ? "not-allowed" : "pointer",
       transition: "all 0.3s ease",
       marginTop: "25px",
-      fontFamily: "'Inter', sans-serif",
       boxShadow: loading ? "none" : "0 4px 15px rgba(102, 126, 234, 0.3)"
     },
     errorMessage: {
@@ -108,17 +104,14 @@ const Login = () => {
       padding: "10px",
       borderRadius: "8px",
       fontSize: "13px",
-      marginBottom: "15px",
-      fontFamily: "'Inter', sans-serif",
-      animation: "shake 0.3s ease-in-out"
+      marginBottom: "15px"
     },
     divider: {
       display: "flex",
       alignItems: "center",
       margin: "25px 0",
       color: "#a0aec0",
-      fontSize: "13px",
-      fontFamily: "'Inter', sans-serif"
+      fontSize: "13px"
     },
     dividerLine: {
       flex: 1,
@@ -132,8 +125,7 @@ const Login = () => {
       textAlign: "center",
       marginTop: "20px",
       fontSize: "14px",
-      color: "#718096",
-      fontFamily: "'Inter', sans-serif"
+      color: "#718096"
     },
     link: {
       color: "#667eea",
@@ -143,100 +135,60 @@ const Login = () => {
     }
   };
 
-  const animationStyles = `
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-5px); }
-      75% { transform: translateX(5px); }
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500;600&display=swap');
-  `;
-
   return (
-    <>
-      <style>{animationStyles}</style>
-      <div style={styles.container}>
-        <div style={styles.formCard}>
-          <div style={styles.header}>
-            <h1 style={styles.title}>Welcome Back</h1>
-            <p style={styles.subtitle}>Login to continue trading</p>
-          </div>
+    <div style={styles.container}>
+      <div style={styles.formCard}>
+        <div style={styles.header}>
+          <h1 style={styles.title}>Welcome Back</h1>
+          <p style={styles.subtitle}>Login to continue trading</p>
+        </div>
 
-          {error && <div style={styles.errorMessage}>⚠️ {error}</div>}
+        {error && <div style={styles.errorMessage}>⚠️ {error}</div>}
 
-          <div style={styles.inputGroup}>
-            <label style={styles.label}>Email Address</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              onFocus={() => setFocusedField("email")}
-              onBlur={() => setFocusedField("")}
-              style={styles.input("email")}
-            />
-          </div>
+        <div style={styles.inputGroup}>
+          <label style={styles.label}>Email Address</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onFocus={() => setFocusedField("email")}
+            onBlur={() => setFocusedField("")}
+            style={styles.input("email")}
+          />
+        </div>
 
-          <div style={styles.inputGroup}>
-            <label style={styles.label}>Password</label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              onFocus={() => setFocusedField("password")}
-              onBlur={() => setFocusedField("")}
-              style={styles.input("password")}
-            />
-          </div>
+        <div style={styles.inputGroup}>
+          <label style={styles.label}>Password</label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            onFocus={() => setFocusedField("password")}
+            onBlur={() => setFocusedField("")}
+            style={styles.input("password")}
+          />
+        </div>
 
-          <button
-            onClick={handleLogin}
-            disabled={loading}
-            style={styles.button}
-            onMouseEnter={(e) => {
-              if (!loading) {
-                e.target.style.transform = "translateY(-2px)";
-                e.target.style.boxShadow = "0 6px 20px rgba(102, 126, 234, 0.4)";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!loading) {
-                e.target.style.transform = "translateY(0)";
-                e.target.style.boxShadow = "0 4px 15px rgba(102, 126, 234, 0.3)";
-              }
-            }}
-          >
-            {loading ? "Logging in..." : "Login"}
-          </button>
+        <button onClick={handleLogin} disabled={loading} style={styles.button}>
+          {loading ? "Logging in..." : "Login"}
+        </button>
 
-          <div style={styles.divider}>
-            <div style={styles.dividerLine}></div>
-            <span style={styles.dividerText}>OR</span>
-            <div style={styles.dividerLine}></div>
-          </div>
+        <div style={styles.divider}>
+          <div style={styles.dividerLine}></div>
+          <span style={styles.dividerText}>OR</span>
+          <div style={styles.dividerLine}></div>
+        </div>
 
-          <div style={styles.signupLink}>
-            Don’t have an account?{" "}
-            <a href="/signup" style={styles.link}>
-              Sign Up
-            </a>
-          </div>
+        <div style={styles.signupLink}>
+          Don’t have an account?{" "}
+          <Link to="/signup" style={styles.link}>
+            Sign Up
+          </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

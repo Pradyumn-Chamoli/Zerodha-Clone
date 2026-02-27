@@ -19,14 +19,14 @@ function CreateAccount() {
           </h4>
 
           <div className="d-flex flex-column topic-links">
-            <a href="#">Online Account Opening</a>
-            <a href="#">Offline Account Opening</a>
-            <a href="#">Company, Partnership and HUF Account</a>
-            <a href="#">Opening</a>
-            <a href="#">NRI Account Opening</a>
-            <a href="#">Charges at Zerodha</a>
-            <a href="#">Zerodha IDFC FIRST Bank 3-in-1 Account</a>
-            <a href="#">Getting Started</a>
+            <button className="link-btn">Online Account Opening</button>
+            <button className="link-btn">Offline Account Opening</button>
+            <button className="link-btn">Company, Partnership and HUF Account</button>
+            <button className="link-btn">Opening</button>
+            <button className="link-btn">NRI Account Opening</button>
+            <button className="link-btn">Charges at Zerodha</button>
+            <button className="link-btn">Zerodha IDFC FIRST Bank 3-in-1 Account</button>
+            <button className="link-btn">Getting Started</button>
           </div>
         </div>
 
@@ -38,11 +38,11 @@ function CreateAccount() {
           </h4>
 
           <div className="d-flex flex-column topic-links">
-            <a href="#">Login Credentials</a>
-            <a href="#">Account Modification and Segment Addition</a>
-            <a href="#">DP ID and bank details</a>
-            <a href="#">Your Profile</a>
-            <a href="#">Transfer and conversion of shares</a>
+            <button className="link-btn">Login Credentials</button>
+            <button className="link-btn">Account Modification and Segment Addition</button>
+            <button className="link-btn">DP ID and bank details</button>
+            <button className="link-btn">Your Profile</button>
+            <button className="link-btn">Transfer and conversion of shares</button>
           </div>
         </div>
 
@@ -54,14 +54,14 @@ function CreateAccount() {
           </h4>
 
           <div className="d-flex flex-column topic-links">
-            <a href="#">Margin/leverage, Product and Order types</a>
-            <a href="#">Kite Web and Mobile</a>
-            <a href="#">Trading FAQs</a>
-            <a href="#">Corporate Actions</a>
-            <a href="#">Sentinel</a>
-            <a href="#">Kite API</a>
-            <a href="#">Stockreports+</a>
-            <a href="#">GTT</a>
+            <button className="link-btn">Margin/leverage, Product and Order types</button>
+            <button className="link-btn">Kite Web and Mobile</button>
+            <button className="link-btn">Trading FAQs</button>
+            <button className="link-btn">Corporate Actions</button>
+            <button className="link-btn">Sentinel</button>
+            <button className="link-btn">Kite API</button>
+            <button className="link-btn">Stockreports+</button>
+            <button className="link-btn">GTT</button>
           </div>
         </div>
 

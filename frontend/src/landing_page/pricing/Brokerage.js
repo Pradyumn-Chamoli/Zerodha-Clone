@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Brokerage() {
   return (
@@ -8,13 +9,11 @@ function Brokerage() {
         {/* LEFT SECTION */}
         <div className="col-lg-8 col-md-12 p-lg-4 p-3">
 
-          <a href="#" className="text-decoration-none">
+          <Link to="/pricing" className="text-decoration-none">
             <h3 className="fs-5">Brokerage calculator</h3>
-          </a>
+          </Link>
 
-          <ul
-            className="text-muted brokerage-list"
-          >
+          <ul className="text-muted brokerage-list">
             <li>
               Call & Trade and RMS auto-squareoff: Additional charges of ₹50 + GST per order.
             </li>
@@ -38,9 +37,9 @@ function Brokerage() {
         {/* RIGHT SECTION */}
         <div className="col-lg-4 col-md-12 p-lg-4 p-3 mt-4 mt-lg-0">
 
-          <a href="#" className="text-decoration-none">
+          <Link to="/charges" className="text-decoration-none">
             <h3 className="fs-5">List of charges</h3>
-          </a>
+          </Link>
 
         </div>
 

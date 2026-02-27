@@ -25,7 +25,12 @@ function Education() {
             world covering everything from the basics to advanced trading.
           </p>
 
-          <a href="#" className="text-decoration-none">
+          <a
+            href="https://zerodha.com/varsity/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-decoration-none"
+          >
             Varsity{" "}
             <i className="fa-solid fa-arrow-right-long"></i>
           </a>
@@ -35,7 +40,12 @@ function Education() {
             India for all your market related queries.
           </p>
 
-          <a href="#" className="text-decoration-none">
+          <a
+            href="https://tradingqna.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-decoration-none"
+          >
             TradingQ&A{" "}
             <i className="fa-solid fa-arrow-right-long"></i>
           </a>

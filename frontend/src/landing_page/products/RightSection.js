@@ -16,11 +16,19 @@ function RightSection({
 
           <p className="text-muted">{productDescription}</p>
 
-          <div className="mt-3">
-            <a href={learnMore} className="text-decoration-none">
-              Learn More
-            </a>
-          </div>
+          {learnMore && (
+            <div className="mt-3">
+              <a
+                href={learnMore}
+                className="text-decoration-none"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn More
+              </a>
+            </div>
+          )}
+
         </div>
 
         {/* IMAGE SECTION */}

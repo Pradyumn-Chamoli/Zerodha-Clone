@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Stats() {
   return (
@@ -24,16 +25,12 @@ function Stats() {
 
           <h2 className="fs-5 mt-4">The Zerodha universe</h2>
           <p className="text-muted">
-            Not just an app, but a whole ecosystem. Our investments in 30+
-            fintech startups offer you tailored services specific to your
-            needs.
+            Not just an app, but a whole ecosystem. Our investments in 30+ fintech startups offer you tailored services specific to your needs.
           </p>
 
           <h2 className="fs-5 mt-4">Do better with money</h2>
           <p className="text-muted">
-            With initiatives like Nudge and Kill Switch, we don't just
-            facilitate transactions, but actively help you do better with your
-            money.
+            With initiatives like Nudge and Kill Switch, we don't just facilitate transactions, but actively help you do better with your money.
           </p>
         </div>
 
@@ -46,15 +43,17 @@ function Stats() {
           />
 
           <div className="mt-4 d-flex flex-column flex-md-row justify-content-center gap-3">
-            <a href="#" className="text-decoration-none">
+            
+            <Link to="/product" className="text-decoration-none">
               Explore our products{" "}
               <i className="fa-solid fa-arrow-right-long"></i>
-            </a>
+            </Link>
 
-            <a href="#" className="text-decoration-none">
+            <Link to="/signup" className="text-decoration-none">
               Try Kite demo{" "}
               <i className="fa-solid fa-arrow-right-long"></i>
-            </a>
+            </Link>
+
           </div>
         </div>
       </div>

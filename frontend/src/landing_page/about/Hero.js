@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -47,9 +48,9 @@ function Hero() {
           </p>
 
           <p>
-            <a href="#" className="text-decoration-none">
+            <Link to="/" className="text-decoration-none">
               Rainmatter
-            </a>, our fintech fund and incubator, has invested in several fintech
+            </Link>, our fintech fund and incubator, has invested in several fintech
             startups with the goal of growing the Indian capital markets.
           </p>
 

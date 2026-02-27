@@ -404,3 +404,19 @@ code {
   }
 
 }
+
+.link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 6px;
+  text-align: left;
+  color: #0d6efd;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+.link-btn:hover {
+  color: #084298;
+}

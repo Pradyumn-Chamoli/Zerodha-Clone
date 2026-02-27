@@ -28,31 +28,69 @@ function LeftSection({
 
           <p className="text-muted">{productDescription}</p>
 
-          <div className="d-flex flex-column flex-md-row gap-3 mt-3">
-            <a href={tryDemo} className="text-decoration-none">
-              Try Demo
-            </a>
-            <a href={learnMore} className="text-decoration-none">
-              Learn More
-            </a>
-          </div>
+          {/* Links */}
+          {(tryDemo || learnMore) && (
+            <div className="d-flex flex-column flex-md-row gap-3 mt-3">
 
-          <div className="mt-4 d-flex flex-column flex-md-row gap-3">
-            <a href={googlePlay}>
-              <img
-                src="media/images/googlePlayBadge.svg"
-                alt="Google Play"
-                className="store-badge"
-              />
-            </a>
-            <a href={appStore}>
-              <img
-                src="media/images/appStoreBadge.svg"
-                alt="App Store"
-                className="store-badge"
-              />
-            </a>
-          </div>
+              {tryDemo && (
+                <a
+                  href={tryDemo}
+                  className="text-decoration-none"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Try Demo
+                </a>
+              )}
+
+              {learnMore && (
+                <a
+                  href={learnMore}
+                  className="text-decoration-none"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Learn More
+                </a>
+              )}
+
+            </div>
+          )}
+
+          {/* Store Buttons */}
+          {(googlePlay || appStore) && (
+            <div className="mt-4 d-flex flex-column flex-md-row gap-3">
+
+              {googlePlay && (
+                <a
+                  href={googlePlay}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="media/images/googlePlayBadge.svg"
+                    alt="Google Play"
+                    className="store-badge"
+                  />
+                </a>
+              )}
+
+              {appStore && (
+                <a
+                  href={appStore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="media/images/appStoreBadge.svg"
+                    alt="App Store"
+                    className="store-badge"
+                  />
+                </a>
+              )}
+
+            </div>
+          )}
 
         </div>
 

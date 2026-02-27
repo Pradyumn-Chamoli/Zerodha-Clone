@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -14,10 +15,10 @@ function Hero() {
 
           <p className="mt-3 mb-4">
             Check out our{" "}
-            <a href="#" className="text-decoration-none">
+            <Link to="/pricing" className="text-decoration-none">
               investment offerings{" "}
               <i className="fa-solid fa-arrow-right-long"></i>
-            </a>
+            </Link>
           </p>
 
         </div>
